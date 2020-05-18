@@ -6,8 +6,10 @@ public class leapYearTest {
     public void setUpBeforeClass() {
         year = new leapYear();
     }
+    @Test
+    public void sampletest() {
+//will be filled in next iteration.
 
-
-
+    }
 
 }
