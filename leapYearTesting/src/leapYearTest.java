@@ -1,15 +1,22 @@
 import org.junit.*;
-public class leapYearTest {
+import static org.junit.Assert.assertEquals;
+
+public class leapYearTest
+{
     private leapYear year;
 
     @Before
-    public void setUpBeforeClass() {
+    public void setUpBeforeClass()
+    {
         year = new leapYear();
     }
-    @Test
-    public void sampletest() {
-//will be filled in next iteration.
 
+    @Test
+    public void checkLeapYearTest()
+    {
+        leapYear test = new leapYear();
+        int output = test.checkLeap(2000);
+        assertEquals(1,output);
     }
 
 }
