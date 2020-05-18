@@ -1,6 +1,27 @@
+import java.util.Scanner;
+
 public class leapYear
-{
-        public int checkLeap(int year)
+{   //Added code for Human Interaction with the code.
+    public static void main(String[] args)
+    {
+        Scanner scanner = new Scanner(System.in);
+        int intValue;
+
+            System.out.print("Please enter the Year: ");
+            String next = scanner.next();
+            //with try-catch we are preventing values greater than Integer.MAX_VALUE to pass.
+            try {
+                intValue = Integer.parseInt(next);
+                int i = checkLeap(intValue);
+                String j = (i==1) ? "is a Leap Year" : "is NOT a Leap Year";
+                System.out.println(intValue+" "+j);
+                }
+            catch (NumberFormatException exp) {
+                System.out.println("Enter a valid Year value");
+            }
+
+    }
+        public static int checkLeap(int year)
         {
             if (year <= 0) // negative values or '0000' don't make any sense for calculating leap-year.
             {
