@@ -2,7 +2,7 @@ public class leapYear
 {
         public int checkLeap(int year)
         {
-            if (year <= 0) // negative values or 0000 don't make any sense for calculating leap-year.
+            if (year <= 0) // negative values or '0000' don't make any sense for calculating leap-year.
             {
                 throw new IllegalArgumentException();
             }
