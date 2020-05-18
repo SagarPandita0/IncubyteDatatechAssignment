@@ -44,7 +44,7 @@ public class leapYearTest
     }
 
     @Test
-    public void IntegerMax_Should_Throw_Error()
+    public void IntegerMax_Should_Give_False()
     {
         leapYear test = new leapYear();
         int output = test.checkLeap(Integer.MAX_VALUE );
