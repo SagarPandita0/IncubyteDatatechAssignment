@@ -32,12 +32,7 @@ public class leapYear
             {
                 if(year % 100 == 0 )
                 {
-                    if(year % 400 == 0)
-                    {
-                        isLeap = true;
-                    }
-                    else
-                        isLeap = false;
+                    isLeap = year % 400 == 0; //refactored.
                 }
                 else
                     isLeap = true;
