@@ -27,4 +27,12 @@ public class leapYearTest
         int output = test.checkLeap(-5);
 
     }
+
+    @Test
+    public void checkNotLeapYearTest()
+    {
+        leapYear test = new leapYear();
+        int output = test.checkLeap(2045);
+        assertEquals(0,output);
+    }
 }
