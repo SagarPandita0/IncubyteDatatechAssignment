@@ -1,5 +1,5 @@
 import org.junit.*;
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class leapYearTest
 {
@@ -41,5 +41,13 @@ public class leapYearTest
     {
         leapYear test = new leapYear();
         int output = test.checkLeap(0);
+    }
+
+    @Test
+    public void IntegerMax_Should_Throw_Error()
+    {
+        leapYear test = new leapYear();
+        int output = test.checkLeap(Integer.MAX_VALUE );
+        assertEquals(0,output);
     }
 }
