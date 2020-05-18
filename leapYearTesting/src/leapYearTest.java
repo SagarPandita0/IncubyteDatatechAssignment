@@ -3,7 +3,7 @@ import static org.junit.Assert.assertEquals;
 
 public class leapYearTest
 {
-    private leapYear year;
+    public leapYear year;
 
     @Before
     public void setUpBeforeClass()
@@ -19,4 +19,12 @@ public class leapYearTest
         assertEquals(1,output);
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    //had we not written this-> (expected = IllegalArgumentException.class) in front of @Test,
+    // the test would have failed. But by mentioning in advance what to expect, passes the test.
+    public void negativeValueShouldError() {
+        leapYear test = new leapYear();
+        int output = test.checkLeap(-5);
+
+    }
 }
